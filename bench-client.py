@@ -131,7 +131,6 @@ def load_config(path: Path) -> BenchClientConfig:
         raise ValueError("At least one server must be configured")
 
     return BenchClientConfig(
-        system_prompt=data.get("system_prompt", ""),
         servers=servers,
         tool_retrieval=tool_retrieval,
         component_naming=data.get("component_naming", "server_prefixed"),

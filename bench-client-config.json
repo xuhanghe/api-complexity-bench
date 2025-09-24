@@ -1,5 +1,4 @@
 {
-  "system_prompt": "You are a benchmarking assistant that selects GitHub-oriented tools when available.",
   "component_naming": "server_prefixed",
   "tool_retrieval": {
     "strategy": "rag",
