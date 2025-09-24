@@ -1,0 +1,53 @@
+{
+  "system_prompt": "You are a benchmarking assistant that selects GitHub-oriented tools when available.",
+  "component_naming": "server_prefixed",
+  "tool_retrieval": {
+    "strategy": "rag",
+    "top_k": 3,
+    "rag": {
+      "metric": "cosine"
+    },
+    "llm": {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "system_prompt": "You are an expert orchestrator that ranks tools by usefulness for a given request.",
+      "max_output_tokens": 256,
+      "temperature": 0.1,
+      "trust_remote_code": true
+    },
+    "slm": {
+      "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+      "system_prompt": "You are a lightweight assistant that picks the best tools for the user request.",
+      "max_output_tokens": 128,
+      "temperature": 0.0,
+      "trust_remote_code": true
+    },
+    "embedding": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "max_output_tokens": 0,
+      "temperature": 0.0,
+      "trust_remote_code": true
+    },
+    "security_slm": {
+      "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+      "system_prompt": "You are a vigilant security analyst who decides whether a tool is safe to expose to untrusted agents.",
+      "max_output_tokens": 128,
+      "temperature": 0.0,
+      "trust_remote_code": true
+    }
+  },
+  "servers": [
+    {
+      "name": "website_fetcher",
+      "transport": "stdio",
+      "command": "python",
+      "args": [
+        "-m",
+        "examples.servers.simple_tool.mcp_simple_tool",
+        "--transport",
+        "stdio"
+      ],
+      "cwd": "../python-sdk",
+      "env": {}
+    }
+  ]
+}
