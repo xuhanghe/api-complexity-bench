@@ -1,8 +1,9 @@
 {
   "component_naming": "server_prefixed",
+  "CUDA_VISIBLE_DEVICES": "0",
   "tool_retrieval": {
-    "strategy": "rag",
-    "top_k": 3,
+    "strategy": "context_injection",
+    "top_k": 10,
     "rag": {
       "metric": "cosine"
     },
@@ -11,43 +12,51 @@
       "system_prompt": "You are an expert orchestrator that ranks tools by usefulness for a given request.",
       "max_output_tokens": 256,
       "temperature": 0.1,
-      "trust_remote_code": true
+      "trust_remote_code": true,
+      "gpu_memory_utilization": 0.9,
+      "max_model_len": 65536,
+      "tensor_parallel_size": 1
     },
     "slm": {
       "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
       "system_prompt": "You are a lightweight assistant that picks the best tools for the user request.",
       "max_output_tokens": 128,
       "temperature": 0.0,
-      "trust_remote_code": true
+      "trust_remote_code": true,
+      "gpu_memory_utilization": 0.3,
+      "max_model_len": 32768,
+      "tensor_parallel_size": 1
     },
     "embedding": {
       "model": "sentence-transformers/all-MiniLM-L6-v2",
       "max_output_tokens": 0,
       "temperature": 0.0,
       "trust_remote_code": true
-    },
+    }    
+  },
+
+  "security":{
+    "with_security_check": false,
     "security_slm": {
       "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
       "system_prompt": "You are a vigilant security analyst who decides whether a tool is safe to expose to untrusted agents.",
       "max_output_tokens": 128,
       "temperature": 0.0,
-      "trust_remote_code": true
+      "trust_remote_code": true,
+      "gpu_memory_utilization": 0.45
     }
   },
+
   "servers": [
     {
-      "name": "yardstick_docker",
+      "name": "yardstick",
       "transport": "stdio",
-      "command": "docker",
+      "command": "./bin/yardstick",
       "args": [
-        "run",
-        "--rm",
-        "-i",
-        "ghcr.io/stackloklabs/yardstick/server",
         "--transport",
         "stdio"
       ],
-      "cwd": null,
+      "cwd": "servers/yardstick",
       "env": {}
     }
   ]

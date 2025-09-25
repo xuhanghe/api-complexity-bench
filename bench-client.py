@@ -16,6 +16,9 @@ from typing import Any, Iterable, Mapping, Sequence
 
 from pydantic import AnyUrl
 
+import os
+import time
+
 try:
     from vllm import LLM, SamplingParams  # type: ignore
 except ImportError as exc:  # pragma: no cover - vLLM optional import guard
@@ -45,6 +48,9 @@ class ModelConfig:
     max_output_tokens: int = 256
     temperature: float = 0.0
     trust_remote_code: bool = False
+    gpu_memory_utilization: float = 0.9
+    tensor_parallel_size: int = 1
+    max_model_len: int = 32768
 
 
 @dataclass
@@ -74,7 +80,6 @@ class ToolRetrievalConfig:
     llm: PromptedModelConfig | None = None
     slm: PromptedModelConfig | None = None
     embedding: ModelConfig | None = None
-    security_slm: PromptedModelConfig | None = None
 
 
 @dataclass
@@ -84,7 +89,7 @@ class BenchClientConfig:
     servers: list[ServerConfig]
     tool_retrieval: ToolRetrievalConfig
     component_naming: str = "server_prefixed"
-
+    security: PromptedModelConfig | None = None
 
 def _parse_model_config(data: dict[str, Any] | None, *, prompted: bool) -> ModelConfig | None:
     if not data:
@@ -96,13 +101,15 @@ def _parse_model_config(data: dict[str, Any] | None, *, prompted: bool) -> Model
 
 def load_config(path: Path) -> BenchClientConfig:
     data = json.loads(path.read_text())
+    os.environ["CUDA_VISIBLE_DEVICES"] = data.get("CUDA_VISIBLE_DEVICES", "0")
 
     tool_retrieval_data = data.get("tool_retrieval", {})
+    security_data = data.get("security", {})
 
     llm_model = _parse_model_config(tool_retrieval_data.get("llm"), prompted=True)
     slm_model = _parse_model_config(tool_retrieval_data.get("slm"), prompted=True)
     embedding_model = _parse_model_config(tool_retrieval_data.get("embedding"), prompted=False)
-    security_slm_model = _parse_model_config(tool_retrieval_data.get("security_slm"), prompted=True)
+    security_slm = _parse_model_config(security_data.get("security_slm"), prompted=True)
 
     tool_retrieval = ToolRetrievalConfig(
         strategy=tool_retrieval_data.get("strategy", "context_injection"),
@@ -110,7 +117,6 @@ def load_config(path: Path) -> BenchClientConfig:
         rag=tool_retrieval_data.get("rag", {}),
         llm=llm_model,
         slm=slm_model,
-        security_slm=security_slm_model,
         embedding=embedding_model,
     )
 
@@ -133,6 +139,7 @@ def load_config(path: Path) -> BenchClientConfig:
         servers=servers,
         tool_retrieval=tool_retrieval,
         component_naming=data.get("component_naming", "server_prefixed"),
+        security=security_slm if security_data.get("with_security_check", False) else None
     )
 
 
@@ -207,7 +214,17 @@ class VLLMTextGenerator:
         assert SamplingParams is not None
 
         self._system_prompt = config.system_prompt
-        self._llm = LLM(model=config.model, trust_remote_code=config.trust_remote_code)
+        self._llm = LLM(
+            model=config.model, 
+            trust_remote_code=config.trust_remote_code,
+            gpu_memory_utilization=config.gpu_memory_utilization,
+            tensor_parallel_size=config.tensor_parallel_size,
+            max_model_len=config.max_model_len
+        )
+        _cfg = self._llm.llm_engine.vllm_config 
+
+        print("################### VLLMTextGenerator using gpu_memory_utilization:", _cfg.cache_config.gpu_memory_utilization)
+
         self._sampling = SamplingParams(
             temperature=config.temperature,
             max_tokens=config.max_output_tokens,
@@ -320,19 +337,20 @@ class BenchMCPClient:
             if self.config.tool_retrieval.llm
             else None
         )
+
+        time.sleep(2)
+
         self._slm_runner: VLLMTextGenerator | None = (
-            VLLMTextGenerator(self.config.tool_retrieval.slm)
-            if self.config.tool_retrieval.slm
-            else None
-        )
+            VLLMTextGenerator(self.config.tool_retrieval.slm)            
+        ) if self.config.tool_retrieval.strategy == "slm" else None
+
         self._embedding_runner: VLLMEmbeddingGenerator | None = (
             VLLMEmbeddingGenerator(self.config.tool_retrieval.embedding)
-            if self.config.tool_retrieval.embedding
-            else None
-        )
+        ) if self.config.tool_retrieval.strategy == "rag" else None
+
         self._security_runner: VLLMTextGenerator | None = (
-            VLLMTextGenerator(self.config.tool_retrieval.security_slm)
-            if self.config.tool_retrieval.security_slm
+            VLLMTextGenerator(self.config.security)
+            if self.config.security
             else None
         )
 
