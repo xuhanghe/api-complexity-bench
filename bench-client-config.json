@@ -36,16 +36,18 @@
   },
   "servers": [
     {
-      "name": "website_fetcher",
+      "name": "yardstick_docker",
       "transport": "stdio",
-      "command": "python",
+      "command": "docker",
       "args": [
-        "-m",
-        "examples.servers.simple_tool.mcp_simple_tool",
+        "run",
+        "--rm",
+        "-i",
+        "ghcr.io/stackloklabs/yardstick/server",
         "--transport",
         "stdio"
       ],
-      "cwd": "../python-sdk",
+      "cwd": null,
       "env": {}
     }
   ]

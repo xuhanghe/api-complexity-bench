@@ -81,7 +81,6 @@ class ToolRetrievalConfig:
 class BenchClientConfig:
     """Top-level configuration for the benchmark client."""
 
-    system_prompt: str
     servers: list[ServerConfig]
     tool_retrieval: ToolRetrievalConfig
     component_naming: str = "server_prefixed"
