@@ -203,6 +203,7 @@ class ToolSelectionError(RuntimeError):
 
 class VLLMTextGenerator:
     """Thin async wrapper around vLLM text generation."""
+    """System prompt is dealt with outside the class. The class only handles plain prompt input."""
 
     def __init__(self, config: PromptedModelConfig):
         if VLLM_IMPORT_ERROR is not None:
@@ -223,8 +224,6 @@ class VLLMTextGenerator:
         )
         _cfg = self._llm.llm_engine.vllm_config 
 
-        print("################### VLLMTextGenerator using gpu_memory_utilization:", _cfg.cache_config.gpu_memory_utilization)
-
         self._sampling = SamplingParams(
             temperature=config.temperature,
             max_tokens=config.max_output_tokens,
@@ -234,8 +233,7 @@ class VLLMTextGenerator:
         loop = asyncio.get_running_loop()
 
         def _run() -> str:
-            full_prompt = f"{self._system_prompt}\n\n{prompt}" if self._system_prompt else prompt
-            outputs = self._llm.generate([full_prompt], sampling_params=self._sampling)
+            outputs = self._llm.generate([prompt], sampling_params=self._sampling)
             if not outputs:
                 return ""
             first = outputs[0]
@@ -331,6 +329,7 @@ class BenchMCPClient:
         self._resource_template_records: dict[str, ResourceTemplateRecord] = {}
         self._resources_by_uri: dict[str, ResourceRecord] = {}
         self._prompt_records: dict[str, PromptRecord] = {}
+        self._previous_context: str = ""
 
         self._llm_runner: VLLMTextGenerator | None = (
             VLLMTextGenerator(self.config.tool_retrieval.llm)
@@ -405,6 +404,7 @@ class BenchMCPClient:
         server_info: types.Implementation,
     ) -> None:
         tools_result = await session.list_tools()
+        print(f"########## tool_results in bootstrap_components: {tools_result}")
         for tool in tools_result.tools:
             qualified = self._qualify_name(tool.name, server_cfg, server_info)
             if qualified in self._tool_records:
@@ -611,7 +611,7 @@ class BenchMCPClient:
             lines.append(f"[{record.qualified_name}] {description}")
         return "\n".join(lines)
 
-    async def tool_retrieving_rag(self, query: str, k: int) -> list[str]:
+    async def tool_retrieving_rag(self, query: str, k: int) -> str:
         query_vector = _text_to_vector(query)
         query_embedding: list[float] | None = None
         if self._embedding_runner:
@@ -637,29 +637,9 @@ class BenchMCPClient:
         top_candidates = [record for _, record in scored[: max(1, k * 3)]]
         candidate_names = [record.qualified_name for record in top_candidates]
 
-        if not self._llm_runner:
-            return candidate_names[:k]
-
-        tool_context = "\n".join(
-            f"- {record.qualified_name}: {record.tool.description or 'No description provided.'}"
-            for record in top_candidates
-        )
-
-        prompt = (
-            "\nTools available:\n"
-            f"{tool_context}\n"
-            "\nTask: Based on the user request, list the best tool names in descending order of usefulness."
-            f"\nUser request: {query}\n"
-            f"Return exactly {k} tool names, separated by newlines."
-        )
-
-        response = await self._llm_runner.generate(prompt)
-        parsed = _extract_tool_names(response, set(candidate_names), k=k)
-        if parsed:
-            return parsed[:k]
         return candidate_names[:k]
 
-    async def tool_retrieving_slm(self, query: str, k: int) -> list[str]:
+    async def tool_retrieving_slm(self, query: str, k: int) -> str:
         if not self._slm_runner:
             raise ToolSelectionError("SLM strategy requested but no SLM model configured")
 
@@ -681,10 +661,11 @@ class BenchMCPClient:
         # Fallback to first k tools if parsing fails.
         return list(self._tool_records.keys())[:k]
 
+
+    ##NEEDS MAJOR REVISION
     async def handle_user_request(
         self,
         request: str,
-        previous_context: Sequence[str] | None = None,
     ) -> dict[str, Any]:
         retrieval_cfg = self.config.tool_retrieval
         result = await self.tool_retrieving(
@@ -693,10 +674,21 @@ class BenchMCPClient:
             strategy=retrieval_cfg.strategy,
             previous_context=previous_context,
         )
-        return {
-            "strategy": retrieval_cfg.strategy,
-            "result": result,
-        }
+
+        prompt = 
+        f"""
+        {self._llm_runner.system_prompt}\n\nHere is the previous context(if any): {self._previous_context}\nYou need to select the best tool from the following tools: {result}
+        """
+
+        message = llm.generate(prompt)
+
+
+
+
+        # return {
+        #     "strategy": retrieval_cfg.strategy,
+        #     "result": result,
+        # }
 
 
 async def async_main(args: argparse.Namespace) -> None:
@@ -705,8 +697,8 @@ async def async_main(args: argparse.Namespace) -> None:
         raise FileNotFoundError(config_path)
 
     async with BenchMCPClient(config_path) as client:
-        previous_context = args.previous_context or []
-        selection = await client.handle_user_request(args.request, previous_context=previous_context)
+
+        selection = await client.handle_user_request(args.request)
         if isinstance(selection["result"], list):
             print("Selected tools:")
             for name in selection["result"]:

@@ -1,0 +1,452 @@
+[
+  {
+    "request": "Can you save the current page as a PDF document and name it 'example' so I can find it easily in the next hour?",
+    "target_tool": {
+      "server_id": "@vinhphamai23/playwright-mcp",
+      "server_name": "Playwright Browser Automation Server",
+      "tool_name": "browser_pdf_save"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you grab an LGTM image and share the markdown snippet plus the image URL?",
+    "target_tool": {
+      "server_id": "@dongri/mcp-server-lgtm",
+      "server_name": "LGTM",
+      "tool_name": "get_lgtm"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you pull the nutrition info for a banana?",
+    "target_tool": {
+      "server_id": "@CelalKhalilov/fruityvice-mcp",
+      "server_name": "Fruityvice Nutrition Info Server",
+      "tool_name": "get_fruit_nutrition"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you take the memory journey 'journey-123' and review the items with me?",
+    "target_tool": {
+      "server_id": "@zeyynepkaraduman/memory-palace-mcp",
+      "server_name": "Memory Palace",
+      "tool_name": "take_journey"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "How long is it from now until next Sunday at 10:00 AM?",
+    "target_tool": {
+      "server_id": "@yokingma/time-mcp",
+      "server_name": "Time MCP Server",
+      "tool_name": "relative_time"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you send me a quick clean joke?",
+    "target_tool": {
+      "server_id": "@meren41/s-navmobil",
+      "server_name": "Manga Translator",
+      "tool_name": "get_random_joke"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you greet Alice with a short, formal welcome?",
+    "target_tool": {
+      "server_id": "@alan5543/mcp-test",
+      "server_name": "Simple MCP Server",
+      "tool_name": "say_hello"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What does 'ambiente' mean? (definitions please)",
+    "target_tool": {
+      "server_id": "@hcatakli/dictionary-mcp",
+      "server_name": "Dictionary Service",
+      "tool_name": "get_definitions"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Tell me a fun random cat fact?",
+    "target_tool": {
+      "server_id": "@ismailcan0/catfactsmcp",
+      "server_name": "Cat Facts Service",
+      "tool_name": "cat_fact"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you fetch the IBGE country record for code 76 (Brazil)?",
+    "target_tool": {
+      "server_id": "@edibertoalves/mcp_ibge",
+      "server_name": "IBGE Municipality Listing Server",
+      "tool_name": "GetPaisPorIdentificador"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What's the live temperature near NYC? (lat 40.7128, lon -74.0060)",
+    "target_tool": {
+      "server_id": "@MehmetFatihAktas/weather-mcp",
+      "server_name": "Weather Information Server",
+      "tool_name": "get_live_temp"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Quick math: can you add 100 + 250?",
+    "target_tool": {
+      "server_id": "@Huramkin/add_mcp",
+      "server_name": "Add Numbers Server",
+      "tool_name": "add_numbers"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What's my BMI if I'm 175 cm and 70 kg?",
+    "target_tool": {
+      "server_id": "@hereisnitish/mcp-server",
+      "server_name": "MCP Server",
+      "tool_name": "get_bmi"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you download a cleaned transcript (en) for this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ?",
+    "target_tool": {
+      "server_id": "@daniellopez-2/youtube-download",
+      "server_name": "yt-dlp Video and Audio Downloader",
+      "tool_name": "download_transcript"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you list the projects in my workspace?",
+    "target_tool": {
+      "server_id": "@PixdataOrg/coderide",
+      "server_name": "CodeRide",
+      "tool_name": "list_projects"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Is the Lyrical MCP server healthy right now?",
+    "target_tool": {
+      "server_id": "@ForceConstant/lyrical_mcp",
+      "server_name": "Lyrical MCP",
+      "tool_name": "health_check"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you show stats about my thoughts in this session?",
+    "target_tool": {
+      "server_id": "@ddkang1/mcp-think-tool",
+      "server_name": "Think Tool Server",
+      "tool_name": "get_thought_stats"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What’s the weather in Paris right now? (metric units, detailed if possible)",
+    "target_tool": {
+      "server_id": "@glassBead-tc/weather-mcp",
+      "server_name": "Weather Server",
+      "tool_name": "get_weather"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Is July 4, 2025 a holiday in the US?",
+    "target_tool": {
+      "server_id": "@ismailcan0/publicholidaysmcp",
+      "server_name": "Public Holidays Service",
+      "tool_name": "check_holiday"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Please add a :thumbsup: reaction to message 1727661234.000200 in channel C12345678.",
+    "target_tool": {
+      "server_id": "@smithery-ai/slack",
+      "server_name": "Slack",
+      "tool_name": "slack_add_reaction"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What are the departments of the Met Museum?",
+    "target_tool": {
+      "server_id": "@mikechao/metmuseum-mcp",
+      "server_name": "Met Museum Server",
+      "tool_name": "list-departments"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you send a Telegram message saying 'Reminder: Daily check-in started.'?",
+    "target_tool": {
+      "server_id": "@SmartManoj/telegram-bot-mcp",
+      "server_name": "Telegram Bot MCP",
+      "tool_name": "send_telegram_message"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What's the current temperature in Tokyo, Japan, which is at 35.69° N and 139.77° E?",
+    "target_tool": {
+      "server_id": "@ismailbl72/weather-forecast-mcp-main12",
+      "server_name": "Weather Forecast Service",
+      "tool_name": "get_live_temp"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What's the school meal menu for the next 3 days at my kid's school, 의정부고등학교?",
+    "target_tool": {
+      "server_id": "@babo072/schoolfoods",
+      "server_name": "SchoolFoods",
+      "tool_name": "get_school_meal"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you get the forecast for lat 34.0200, lon -118.4900?",
+    "target_tool": {
+      "server_id": "@makingendless/endless-mcp",
+      "server_name": "Endless",
+      "tool_name": "get-forecast"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you suggest some conferences related to python and machine learning that are happening soon, like in the next six months, so I can plan my schedule accordingly?",
+    "target_tool": {
+      "server_id": "@ismailbl72/call-for-papers-mcp",
+      "server_name": "ConferenceSearcher",
+      "tool_name": "get_events"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you show me the list of pending commands?",
+    "target_tool": {
+      "server_id": "@cfdude/super-shell-mcp",
+      "server_name": "Super Shell",
+      "tool_name": "get_pending_commands"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you search Hugging Face Spaces for 'diffusers' and show up to 10 results?",
+    "target_tool": {
+      "server_id": "@shreyaskarnik/huggingface-mcp-server",
+      "server_name": "Hugging Face MCP Server",
+      "tool_name": "search-spaces"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you geocode 'Tokyo, Japan' for me (coords please)?",
+    "target_tool": {
+      "server_id": "@smithery-ai/google-maps",
+      "server_name": "Google Maps",
+      "tool_name": "maps_geocode"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Please send an email to my colleague with subject 'Meeting Reminder' and body 'Hello, this is a reminder about our team meeting next week. Please check your schedule'.",
+    "target_tool": {
+      "server_id": "@TKelvyn/mcp",
+      "server_name": "mcp max",
+      "tool_name": "send_email_tool"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you show me the API steps to create a Sales Order?",
+    "target_tool": {
+      "server_id": "@DevWebDJ/frappe_mcp_server",
+      "server_name": "Frappe Framework Integration Server",
+      "tool_name": "get_api_instructions"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Please switch to Azure tenant '00000000-0000-0000-0000-000000000000'.",
+    "target_tool": {
+      "server_id": "@Streen9/azure-mcp",
+      "server_name": "Azure MCP",
+      "tool_name": "select-tenant"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you run: echo 'Hello World' and show the output?",
+    "target_tool": {
+      "server_id": "@charles-adedotun/Lilith-Shell",
+      "server_name": "Lilith Shell",
+      "tool_name": "execute_command"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What’s the latest commit that touched components/sync/service/data_type_manager.cc?",
+    "target_tool": {
+      "server_id": "@hydavinci/chromium-commits",
+      "server_name": "Chromium Latest Commit",
+      "tool_name": "get_chromium_latest_commit"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What are the top 10 trending Python developers on GitHub who have been active over the past week, and could you give me a list of their GitHub usernames?",
+    "target_tool": {
+      "server_id": "@hetaoBackend/mcp-github-trending",
+      "server_name": "GitHub Trending",
+      "tool_name": "get_github_trending_developers"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What’s the live temperature in LA? (34.0522, -118.2437)",
+    "target_tool": {
+      "server_id": "@emineturan/weather",
+      "server_name": "Weather Service",
+      "tool_name": "get_live_temp"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you give me a list of all banks in Brazil, including their headquarters and operational areas, so I can compare them and choose the right one for my new business to open an account?",
+    "target_tool": {
+      "server_id": "@mauricio-cantu/brasil-api-mcp-server",
+      "server_name": "BrasilAPI MCP Server",
+      "tool_name": "get_all_banks"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you cross-check the answer to 'What is overfitting?' with three LLMs?",
+    "target_tool": {
+      "server_id": "@lior-ps/multi-llm-cross-check-mcp-server",
+      "server_name": "Multi LLM Cross-Check Server",
+      "tool_name": "cross_check"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Please search arXiv for 'Graph Neural Networks' (up to 10 results).",
+    "target_tool": {
+      "server_id": "@daheepk/arxiv-paper-mcp",
+      "server_name": "arXiv Research Assistant",
+      "tool_name": "search_papers"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What are the top-rated Italian restaurants in New York City that I can visit within the next 7 days?",
+    "target_tool": {
+      "server_id": "@seekeasy/seekeasy",
+      "server_name": "Seekeasy MCP Server",
+      "tool_name": "search_restaurants"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Get definitions for the term 'artificial intelligence'.",
+    "target_tool": {
+      "server_id": "@EminUstun/mcp-server",
+      "server_name": "MCP Server",
+      "tool_name": "get_definitions"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you pull NPM package details for 'react'?",
+    "target_tool": {
+      "server_id": "@ardyfeb/package-registry-mcp",
+      "server_name": "Package Registry Server",
+      "tool_name": "get-npm-package-details"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "I'd like to see a random Pokémon that's been introduced in the last year. Can you show me which one was chosen?",
+    "target_tool": {
+      "server_id": "@MetehanGZL/pokemcp",
+      "server_name": "Pokémon Information Server",
+      "tool_name": "random_pokemon"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Here's a picture of a cat sitting on a couch. Can you generate a realistic image URL that shows a similar scene - a cat on a couch, preferably with a sunset in the background?",
+    "target_tool": {
+      "server_id": "@falahgs/flux-imagegen-mcp-server",
+      "server_name": "Flux ImageGen Server",
+      "tool_name": "generateImageUrl"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What’s the current temperature around 37.7749, -122.4194 (SF)?",
+    "target_tool": {
+      "server_id": "@ebubekirkarakurt/mcp-word",
+      "server_name": "MCP-WORD Server",
+      "tool_name": "get_live_temp"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you analyze this selfie (https://example.com/selfie.jpg) and tell me what you see?",
+    "target_tool": {
+      "server_id": "@leegentle/skincare-mcp",
+      "server_name": "Skincare",
+      "tool_name": "get-selfie-analysis"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Can you multiply 4 by 3 for me?",
+    "target_tool": {
+      "server_id": "@swaroopkasaraneni/math-mcp-server",
+      "server_name": "Math Operations Server",
+      "tool_name": "multiply"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Could you pull the danmaku for Bilibili video BV1xx411c7mD?",
+    "target_tool": {
+      "server_id": "@chenmingkong/bilibili-mcp-server",
+      "server_name": "Bilibili API Server",
+      "tool_name": "get_video_danmaku"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "Anything I should know about using Hugeicons with React?",
+    "target_tool": {
+      "server_id": "@hugeicons/mcp-server",
+      "server_name": "Hugeicons MCP Server",
+      "tool_name": "get_platform_usage"
+    },
+    "bucket": "Simple"
+  },
+  {
+    "request": "What time is it right now in America/New_York?",
+    "target_tool": {
+      "server_id": "@fisher1006/time-mcp-4",
+      "server_name": "Time Server",
+      "tool_name": "get_current_time"
+    },
+    "bucket": "Simple"
+  }
+]

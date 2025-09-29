@@ -1,0 +1,2288 @@
+{
+  "summary": {
+    "Simple": {
+      "model:SLM:Qwen/Qwen2.5-Omni-3B": {
+        "success_rate_topk": 0.84,
+        "total": 50,
+        "successes": 42
+      },
+      "model:LLM:Qwen/Qwen2.5-Omni-7B": {
+        "success_rate_topk": 0.94,
+        "total": 50,
+        "successes": 47
+      }
+    },
+    "Hard": {
+      "model:SLM:Qwen/Qwen2.5-Omni-3B": {
+        "success_rate_topk": 0.56,
+        "total": 50,
+        "successes": 28
+      },
+      "model:LLM:Qwen/Qwen2.5-Omni-7B": {
+        "success_rate_topk": 0.88,
+        "total": 50,
+        "successes": 44
+      }
+    }
+  },
+  "details": {
+    "model:SLM:Qwen/Qwen2.5-Omni-3B": {
+      "Simple": {
+        "success_rate_topk": 0.84,
+        "total": 50,
+        "successes": 42,
+        "items": [
+          {
+            "bucket": "Simple",
+            "request": "Can you save the current page as a PDF document and name it 'example' so I can find it easily in the next hour?",
+            "target_tool": "Playwright Browser Automation Server:browser_pdf_save",
+            "predictions": [
+              "Playwright Browser Automation Server:browser_pdf_save"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you grab an LGTM image and share the markdown snippet plus the image URL?",
+            "target_tool": "LGTM:get_lgtm",
+            "predictions": [
+              "LGTM:get_lgtm"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you pull the nutrition info for a banana?",
+            "target_tool": "Fruityvice Nutrition Info Server:get_fruit_nutrition",
+            "predictions": [
+              "Fruityvice Nutrition Info Server:get_fruit_nutrition"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you take the memory journey 'journey-123' and review the items with me?",
+            "target_tool": "Memory Palace:take_journey",
+            "predictions": [
+              "Memory Palace:take_journey"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "How long is it from now until next Sunday at 10:00 AM?",
+            "target_tool": "Time MCP Server:relative_time",
+            "predictions": [
+              "Time MCP Server:relative_time"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you send me a quick clean joke?",
+            "target_tool": "Manga Translator:get_random_joke",
+            "predictions": [
+              "Server A:Manga Translator:get_random_joke"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you greet Alice with a short, formal welcome?",
+            "target_tool": "Simple MCP Server:say_hello",
+            "predictions": [
+              "Simple MCP Server:say_hello"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What does 'ambiente' mean? (definitions please)",
+            "target_tool": "Dictionary Service:get_definitions",
+            "predictions": [
+              "Dictionary Service:get_definitions"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Tell me a fun random cat fact?",
+            "target_tool": "Cat Facts Service:cat_fact",
+            "predictions": [
+              "Server A:cat_fact"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you fetch the IBGE country record for code 76 (Brazil)?",
+            "target_tool": "IBGE Municipality Listing Server:GetPaisPorIdentificador",
+            "predictions": [
+              "IBGE Municipality Listing Server:GetPaisPorIdentificador"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's the live temperature near NYC? (lat 40.7128, lon -74.0060)",
+            "target_tool": "Weather Information Server:get_live_temp",
+            "predictions": [
+              "Weather Information Server:get_live_temp"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 52,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Quick math: can you add 100 + 250?",
+            "target_tool": "Add Numbers Server:add_numbers",
+            "predictions": [
+              "Calculator Service:multiply"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's my BMI if I'm 175 cm and 70 kg?",
+            "target_tool": "MCP Server:get_bmi",
+            "predictions": [
+              "MCP Server:get_bmi"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you download a cleaned transcript (en) for this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ?",
+            "target_tool": "yt-dlp Video and Audio Downloader:download_transcript",
+            "predictions": [
+              "yt-dlp Video and Audio Downloader:download_transcript"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you list the projects in my workspace?",
+            "target_tool": "CodeRide:list_projects",
+            "predictions": [
+              "CodeRide:list_projects"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Is the Lyrical MCP server healthy right now?",
+            "target_tool": "Lyrical MCP:health_check",
+            "predictions": [
+              "Lyrical MCP:health_check"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you show stats about my thoughts in this session?",
+            "target_tool": "Think Tool Server:get_thought_stats",
+            "predictions": [
+              "Think Tool Server:get_thought_stats"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the weather in Paris right now? (metric units, detailed if possible)",
+            "target_tool": "Weather Server:get_weather",
+            "predictions": [
+              "Weather Server:get_weather"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Is July 4, 2025 a holiday in the US?",
+            "target_tool": "Public Holidays Service:check_holiday",
+            "predictions": [
+              "United States Weather:get_weather_alerts"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please add a :thumbsup: reaction to message 1727661234.000200 in channel C12345678.",
+            "target_tool": "Slack:slack_add_reaction",
+            "predictions": [
+              "Slack:slack_add_reaction"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What are the departments of the Met Museum?",
+            "target_tool": "Met Museum Server:list-departments",
+            "predictions": [
+              "Met Museum Server:list-departments"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you send a Telegram message saying 'Reminder: Daily check-in started.'?",
+            "target_tool": "Telegram Bot MCP:send_telegram_message",
+            "predictions": [
+              "Telegram Bot MCP:send_telegram_message"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's the current temperature in Tokyo, Japan, which is at 35.69° N and 139.77° E?",
+            "target_tool": "Weather Forecast Service:get_live_temp",
+            "predictions": [
+              "Weather Forecast Service:get_live_temp"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's the school meal menu for the next 3 days at my kid's school, 의정부고등학교?",
+            "target_tool": "SchoolFoods:get_school_meal",
+            "predictions": [
+              "SchoolFoods:get_school_meal"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 63,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you get the forecast for lat 34.0200, lon -118.4900?",
+            "target_tool": "Endless:get-forecast",
+            "predictions": [
+              "Endless:get-forecast"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you suggest some conferences related to python and machine learning that are happening soon, like in the next six months, so I can plan my schedule accordingly?",
+            "target_tool": "ConferenceSearcher:get_events",
+            "predictions": [
+              "ConferenceSearcher:get_events"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you show me the list of pending commands?",
+            "target_tool": "Super Shell:get_pending_commands",
+            "predictions": [
+              "Super Shell:get_pending_commands"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you search Hugging Face Spaces for 'diffusers' and show up to 10 results?",
+            "target_tool": "Hugging Face MCP Server:search-spaces",
+            "predictions": [
+              "Hugging Face MCP Server:search-spaces"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you geocode 'Tokyo, Japan' for me (coords please)?",
+            "target_tool": "Google Maps:maps_geocode",
+            "predictions": [
+              "Google Maps:maps_geocode"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please send an email to my colleague with subject 'Meeting Reminder' and body 'Hello, this is a reminder about our team meeting next week. Please check your schedule'.",
+            "target_tool": "mcp max:send_email_tool",
+            "predictions": [
+              "mcp max:send_email_tool"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you show me the API steps to create a Sales Order?",
+            "target_tool": "Frappe Framework Integration Server:get_api_instructions",
+            "predictions": [
+              "Frappe Framework Integration Server:get_api_instructions"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please switch to Azure tenant '00000000-0000-0000-0000-000000000000'.",
+            "target_tool": "Azure MCP:select-tenant",
+            "predictions": [
+              "Azure MCP:select-tenant"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you run: echo 'Hello World' and show the output?",
+            "target_tool": "Lilith Shell:execute_command",
+            "predictions": [
+              "Lilith Shell:execute_command"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the latest commit that touched components/sync/service/data_type_manager.cc?",
+            "target_tool": "Chromium Latest Commit:get_chromium_latest_commit",
+            "predictions": [
+              "Chromium Latest Commit:get_chromium_latest_commit"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What are the top 10 trending Python developers on GitHub who have been active over the past week, and could you give me a list of their GitHub usernames?",
+            "target_tool": "GitHub Trending:get_github_trending_developers",
+            "predictions": [
+              "GitHub Trending:get_github_trending_developers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the live temperature in LA? (34.0522, -118.2437)",
+            "target_tool": "Weather Service:get_live_temp",
+            "predictions": [
+              "weatherr:get_live_temp"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you give me a list of all banks in Brazil, including their headquarters and operational areas, so I can compare them and choose the right one for my new business to open an account?",
+            "target_tool": "BrasilAPI MCP Server:get_all_banks",
+            "predictions": [
+              "BrasilAPI MCP Server:get_all_banks"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you cross-check the answer to 'What is overfitting?' with three LLMs?",
+            "target_tool": "Multi LLM Cross-Check Server:cross_check",
+            "predictions": [
+              "Multi LLM Cross-Check Server:cross_check"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please search arXiv for 'Graph Neural Networks' (up to 10 results).",
+            "target_tool": "arXiv Research Assistant:search_papers",
+            "predictions": [
+              "arXiv Research Assistant:search_papers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What are the top-rated Italian restaurants in New York City that I can visit within the next 7 days?",
+            "target_tool": "Seekeasy MCP Server:search_restaurants",
+            "predictions": [
+              "Server A:Seekeasy MCP Server:search_restaurants"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Get definitions for the term 'artificial intelligence'.",
+            "target_tool": "MCP Server:get_definitions",
+            "predictions": [
+              "MCP Server:get_definitions"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you pull NPM package details for 'react'?",
+            "target_tool": "Package Registry Server:get-npm-package-details",
+            "predictions": [
+              "NPM Sentinel MCP:npmLatest"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "I'd like to see a random Pokémon that's been introduced in the last year. Can you show me which one was chosen?",
+            "target_tool": "Pokémon Information Server:random_pokemon",
+            "predictions": [
+              "Pokémon Information Server:random_pokemon"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Here's a picture of a cat sitting on a couch. Can you generate a realistic image URL that shows a similar scene - a cat on a couch, preferably with a sunset in the background?",
+            "target_tool": "Flux ImageGen Server:generateImageUrl",
+            "predictions": [
+              "Flux ImageGen Server:generateImageUrl"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the current temperature around 37.7749, -122.4194 (SF)?",
+            "target_tool": "MCP-WORD Server:get_live_temp",
+            "predictions": [
+              "Weather Forecast Server:get_weather_by_coordinates"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you analyze this selfie (https://example.com/selfie.jpg) and tell me what you see?",
+            "target_tool": "Skincare:get-selfie-analysis",
+            "predictions": [
+              "Skincare:get-selfie-analysis"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you multiply 4 by 3 for me?",
+            "target_tool": "Math Operations Server:multiply",
+            "predictions": [
+              "Math Operations Server:multiply"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 52,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you pull the danmaku for Bilibili video BV1xx411c7mD?",
+            "target_tool": "Bilibili API Server:get_video_danmaku",
+            "predictions": [
+              "Bilibili API Server:get_video_danmaku"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Anything I should know about using Hugeicons with React?",
+            "target_tool": "Hugeicons MCP Server:get_platform_usage",
+            "predictions": [
+              "Hugeicons MCP Server:get_platform_usage"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What time is it right now in America/New_York?",
+            "target_tool": "Time Server:get_current_time",
+            "predictions": [
+              "Time Server:get_current_time"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          }
+        ]
+      },
+      "Hard": {
+        "success_rate_topk": 0.56,
+        "total": 50,
+        "successes": 28,
+        "items": [
+          {
+            "bucket": "Hard",
+            "request": "Could you sketch a flowchart of our user signup, with the key nodes and transitions?",
+            "target_tool": "Visual Reasoning Server:visualReasoning",
+            "predictions": [
+              "Trello MCP Server:get_board_labels"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 41,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you pull the top 5 AI news from the last 30 days and summarize them?",
+            "target_tool": "Google News and Trends:get_news_by_keyword",
+            "predictions": [
+              "Google News and Trends:get_news_by_keyword"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "I’m optimizing an iOS project—can you scan '/Users/iosdev/Projects/MyProject' and list all files, including tests, so I can pass them to the optimizer?",
+            "target_tool": "iOS Code Migration Optimization Tool:ios_scan_project",
+            "predictions": [
+              "iOS Code Migration Optimization Tool:ios_scan_project"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Hey, can you check my balance on Binance spot?",
+            "target_tool": "CCXT MCP Server:account-balance",
+            "predictions": [
+              "CCXT MCP Server:account-balance"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you search Google Scholar for 'transformer interpretability' and give me up to 10 hits?",
+            "target_tool": "Google Scholar Search Server:search_google_scholar",
+            "predictions": [
+              "Server A:search_google_scholar"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 52,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me create a clustered index on the 'employee_id' and 'last_name' columns in the 'employees' table, within the 'hr' schema of the 'mssql_server' database, so that employee records can be uniquely identified by 'employee_id' and 'last_name' for the next 3 months?",
+            "target_tool": "MSSQL Server Integration:create_index",
+            "predictions": [
+              "MSSQL Server Integration:create_index"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Do you know which geologic time interval matches ~66 million years?",
+            "target_tool": "Macrostrat API Server:timescale",
+            "predictions": [
+              "Macrostrat API Server:timescale"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 50,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "some help planning a quick trip to visit the top 5 beaches in Florida within the next 7 days. Can you suggest the top beaches, consider the weather forecast, and recommend the closest ones to Miami, Tampa, and Jacksonville, including any local events, natural attractions, and transportation options?",
+            "target_tool": "Google Search Server:search_google",
+            "predictions": [
+              "Financial Modeling Prep MCP Server:getSectorPerformanceSnapshot",
+              "Financial Modeling Prep MCP Server:getAnalystEstimates",
+              "Financial Modeling Prep MCP Server:getStockGrades",
+              "Financial Modeling Prep MCP Server:getEarningsReports",
+              "Financial Modeling Prep MCP Server:getCryptocurrency5MinuteData",
+              "Financial Modeling Prep MCP Server:getGeneralNews",
+              "Financial Modeling Prep MCP Server:getSectorPerformanceSnapshot",
+              "Financial Modeling Prep MCP Server:getAnalystEstimates",
+              "Financial Modeling Prep MCP Server:getStockGrades",
+              "Financial Modeling Prep MCP Server:getEarningsReports",
+              "Financial Modeling Prep MCP Server:getCryptocurrency5MinuteData",
+              "Financial Modeling Prep MCP Server:getGeneralNews"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 44,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you grab a quick screenshot of the current page and call it 'current-page'?",
+            "target_tool": "Browserbase:browserbase_screenshot",
+            "predictions": [
+              "Browserbase:browserbase_screenshot"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you create a trigger for me on the orders table?",
+            "target_tool": "PostgreSQL Database Management Server:pg_manage_triggers",
+            "predictions": [
+              "PostgreSQL Database Management Server:pg_manage_triggers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Quick math: can you add 123.45 and 678.90 for me?",
+            "target_tool": "计算器(Calc MCP):add",
+            "predictions": [
+              "Calculator(Calc MCP):add"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me figure out how to analyze the relationship between the number of hours of sleep and feeling refreshed in the morning?",
+            "target_tool": "Clear Thought 1.5:clear_thought",
+            "predictions": [
+              "Sequential Thinking:sequential_thinking"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 40,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "I’m working on a RN Skia swipe-to-reveal list item—could you outline a performant approach with steps, techniques, and sample code?",
+            "target_tool": "React Native Skia Animation Thinking Tool:skiaanimationthinking",
+            "predictions": [
+              "Server:React Native Skia Animation Thinking Tool"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me design a study to test the relationship between time spent playing video games and time spent reading books?",
+            "target_tool": "Scientific Method Server:scientificMethod",
+            "predictions": [
+              "Scientific Method Server:scientificMethod"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "What are the current constituents of the CoinMarketCap 100 Index?",
+            "target_tool": "CoinMarketCap MCP:cmc100IndexLatest",
+            "predictions": [
+              "Server A:CoinMarketCap MCP:cmc100IndexLatest"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you use Atom of Thoughts to break down planning a team-building event—premises, reasoning, hypotheses, verification, and a conclusion?",
+            "target_tool": "Atom of Thoughts:AoT",
+            "predictions": [
+              "Server A:Atom of Thoughts:AoT"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you fetch https://www.weather.gov/ and give me the content in markdown?",
+            "target_tool": "Fetch Server:fetch",
+            "predictions": [
+              "Server A:fetch",
+              "Server B:fetch",
+              "Server C:fetch",
+              "Server D:fetch",
+              "Server E:fetch",
+              "Server F:fetch",
+              "Server G:fetch",
+              "Server H:fetch",
+              "Server I:fetch",
+              "Server J:fetch",
+              "Server K:fetch",
+              "Server L:fetch",
+              "Server M:fetch",
+              "Server N:fetch",
+              "Server O:fetch",
+              "Server P:fetch",
+              "Server Q:fetch",
+              "Server R:fetch",
+              "Server S:fetch",
+              "Server T:fetch",
+              "Server U:fetch",
+              "Server V:fetch",
+              "Server W:fetch",
+              "Server X:fetch",
+              "Server Y:fetch",
+              "Server Z:fetch"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you find up-to-date docs and examples for 'pandas DataFrame filtering'—ideally some real-world cleaning, transform, and viz cases?",
+            "target_tool": "Exa Search:get_code_context_exa",
+            "predictions": [
+              "Exa Search:get_code_context_exa"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you delete the tensor named 'temp_model_output' from memory?",
+            "target_tool": "Scientific Computation MCP Server:delete_tensor",
+            "predictions": [
+              "Scientific Computation MCP Server:delete_tensor"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you search for images of 'golden retriever' (large only, 10 results, relevance sort)?",
+            "target_tool": "Naver Search:search_image",
+            "predictions": [
+              "Naver Search:search_image"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Using Desktop Commander: can you send print('hello from DC') to the Python REPL running as PID 1234?",
+            "target_tool": "Desktop Commander:interact_with_process",
+            "predictions": [
+              "Desktop Commander:tool_x"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 0,
+            "haystack_tool_count": 0
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me prioritize tasks for the next week and figure out which ones can be done with the tools we have?",
+            "target_tool": "Taskmaster:taskmaster",
+            "predictions": [],
+            "hit_topk": false,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you grab the current global crypto market stats—active/ended ICOs, total volume (BTC/USD), and total market cap (BTC/USD)?",
+            "target_tool": "CoinGecko API Server:API-search-data",
+            "predictions": [
+              "Server A:CoinGecko API Server:API-search-data"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 49,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you get me the most relevant papers on reinforcement learning that were recently posted to arXiv, starting from the past year, with maybe 20 results at most, in descending order of relevance, so I can check them out?",
+            "target_tool": "AI Research Assistant:search-arxiv",
+            "predictions": [],
+            "hit_topk": false,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Mind generating a 1024x1024 photorealistic image of a serene beach at sunset with palm trees?",
+            "target_tool": "text2image:image_generation",
+            "predictions": [
+              "Server A:image_generation"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 49,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please export the full game design as HTML docs.",
+            "target_tool": "Game Engine Server:exportGameDesign",
+            "predictions": [
+              "Game Engine Server:gamedesignthinking"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you analyze and rate this prompt’s quality: 'Write a concise email to schedule a team meeting next Tuesday at 10am.'",
+            "target_tool": "Hi-AI:analyze_prompt",
+            "predictions": [],
+            "hit_topk": false,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you check the USDT (ERC20) balance for 0xF977814e90dA44bFA03b6295A0616a897441aceC on Ethereum mainnet?",
+            "target_tool": "Blockscout MCP Server:read_contract",
+            "predictions": [
+              "Blockscout MCP Server:read_contract"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 39,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you plan a quick 5-day trip with my friend to a nearby city?",
+            "target_tool": "Sequential Thinking:sequentialthinking",
+            "predictions": [],
+            "hit_topk": false,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me understand the new compound's properties by drawing an analogy with water's structure and behavior, considering both atomic composition and chemical bonding, so I can make some educated guesses about its performance in various conditions and weigh the usefulness of this analogy?",
+            "target_tool": "Analogical Reasoning Server:analogicalReasoning",
+            "predictions": [
+              "Analogical Reasoning Server:analogicalReasoning"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 42,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you give me a list of the top 5 most recent internet-connected devices running Apache HTTP Server in the US, along with their geographic distribution, services, and any known vulnerabilities, within the next 30 days?",
+            "target_tool": "Shodan Server:shodan_search",
+            "predictions": [
+              "Shodan Server:shodan_search"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 44,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you run a clean on '/Users/iosdev/Projects/MyApp.xcodeproj' (scheme 'MyApp')?",
+            "target_tool": "XcodeBuild MCP Server:clean_proj",
+            "predictions": [
+              "XcodeBuild MCP Server:clean_proj"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please search Semantic Scholar for authors related to 'artificial intelligence' and return up to 50.",
+            "target_tool": "Semantic Scholar Academic Research MCP:search_semantic_scholar_authors",
+            "predictions": [
+              "Semantic Scholar Academic Research MCP:search_semantic_scholar_authors"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 50,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you show me the balance of ad account act_1234567890, and its name, by tomorrow?",
+            "target_tool": "Facebook Ads Server:get_details_of_ad_account",
+            "predictions": [
+              "Facebook Ads Server:get_details_of_ad_account"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 50,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you rename the 'Marketing Tasks' folder to 'Marketing Archive' (leave statuses as-is)?",
+            "target_tool": "ClickUp Task Integration Server:update_folder",
+            "predictions": [
+              "ClickUp Task Integration Server:update_folder"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can I get the latest version of 'doc123' from Linear?",
+            "target_tool": "Linear:get_document",
+            "predictions": [
+              "Linear:get_document"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 49,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you plan a 7-day trip for me somewhere with a pleasant, not too hot climate, and find a hotel that's right on or close to the beach, ideally within walking distance?",
+            "target_tool": "Model Context Protocol Server:sequentialthinking",
+            "predictions": [
+              "Google Calendar and Meet:get_current_time"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you pull the current Prometheus metrics from the WildFly server on 'wildfly-host:8080'?",
+            "target_tool": "WildFly MCP Server:getWildFlyPrometheusMetrics",
+            "predictions": [
+              "WildFly MCP Server:getWildFlyPrometheusMetrics"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you fetch https://twitter.com/ and give me the page in markdown?",
+            "target_tool": "Fetch Server:fetch",
+            "predictions": [
+              "Server:Fetch",
+              "Server:MarkdownParser"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "And if possible, could you also include the trading volume for each day?",
+            "target_tool": "FinanceMCP Server:stock_data",
+            "predictions": [
+              "CCXT Cryptocurrency Exchange Server:fetch_public_market_trades"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Hey, I'm looking for this week's Watchtower study articles, could you get the latest ones from JW.org?",
+            "target_tool": "JW.org Content Tools:getWatchtowerLinks",
+            "predictions": [
+              "JW.org Content Tools:getWatchtowerLinks"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you search PubMed for title/abstract keywords ['Parkinson's disease', 'recruiting'] and give me up to 10 results?",
+            "target_tool": "PubMedSearch:search_pubmed",
+            "predictions": [
+              "PubMedSearch"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 42,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please delete the TCP proxy I created yesterday/today that’s still active, and confirm it’s gone.",
+            "target_tool": "Railway MCP Server:tcp_proxy_delete",
+            "predictions": [
+              "Railway MCP Server:tcp_proxy_delete"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you show the weather assistant’s friendly greeting message?",
+            "target_tool": "Deneme MCP Server:weather_greeting",
+            "predictions": [
+              "Server A:Deneme MCP Server:weather_greeting"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please create a new group called 'Summer Reading List'.",
+            "target_tool": "Clay MCP:createGroup",
+            "predictions": [
+              "Clay MCP:createGroup"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can I get a list of all my requests with their basic information and a summary of the tasks involved?",
+            "target_tool": "TaskManager:list_requests",
+            "predictions": [
+              "TaskManager:list_requests"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "In the document, please delete characters 5-15 from paragraph 0.",
+            "target_tool": "Docx Document Processing Service:delete_text",
+            "predictions": [
+              "Docx Document Processing Service:delete_text"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 44,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you show me the Velt feature usage analytics for the past month, breaking down the counts of create, read, update, and delete operations for each feature?",
+            "target_tool": "Velt Analytics Server:get_feature_analytics_count",
+            "predictions": [
+              "Velt Analytics Server:get_feature_analytics_count"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you provide overall statistics for Parkinson's disease clinical trials?",
+            "target_tool": "ClinicalTrials MCP Server:get_study_statistics",
+            "predictions": [
+              "ClinicalTrials MCP Server:get_study_statistics"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "When you get a chance, list the existing Hyperbrowser profiles (defaults are fine).",
+            "target_tool": "Hyperbrowser:list_profiles",
+            "predictions": [
+              "Hyperbrowser:list_profiles"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          }
+        ]
+      }
+    },
+    "model:LLM:Qwen/Qwen2.5-Omni-7B": {
+      "Simple": {
+        "success_rate_topk": 0.94,
+        "total": 50,
+        "successes": 47,
+        "items": [
+          {
+            "bucket": "Simple",
+            "request": "Can you save the current page as a PDF document and name it 'example' so I can find it easily in the next hour?",
+            "target_tool": "Playwright Browser Automation Server:browser_pdf_save",
+            "predictions": [
+              "Playwright Browser Automation Server:browser_pdf_save"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you grab an LGTM image and share the markdown snippet plus the image URL?",
+            "target_tool": "LGTM:get_lgtm",
+            "predictions": [
+              "LGTM:get_lgtm"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you pull the nutrition info for a banana?",
+            "target_tool": "Fruityvice Nutrition Info Server:get_fruit_nutrition",
+            "predictions": [
+              "Fruityvice Nutrition Info Server:get_fruit_nutrition"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you take the memory journey 'journey-123' and review the items with me?",
+            "target_tool": "Memory Palace:take_journey",
+            "predictions": [
+              "Memory Palace:take_journey"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "How long is it from now until next Sunday at 10:00 AM?",
+            "target_tool": "Time MCP Server:relative_time",
+            "predictions": [
+              "Time MCP Server:relative_time"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you send me a quick clean joke?",
+            "target_tool": "Manga Translator:get_random_joke",
+            "predictions": [
+              "Manga Translator:get_random_joke"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you greet Alice with a short, formal welcome?",
+            "target_tool": "Simple MCP Server:say_hello",
+            "predictions": [
+              "Simple MCP Server:say_hello"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What does 'ambiente' mean? (definitions please)",
+            "target_tool": "Dictionary Service:get_definitions",
+            "predictions": [
+              "Dictionary Service:get_definitions"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Tell me a fun random cat fact?",
+            "target_tool": "Cat Facts Service:cat_fact",
+            "predictions": [
+              "Cat Facts Service:cat_fact"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you fetch the IBGE country record for code 76 (Brazil)?",
+            "target_tool": "IBGE Municipality Listing Server:GetPaisPorIdentificador",
+            "predictions": [
+              "IBGE Municipality Listing Server:GetPaisPorIdentificador"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's the live temperature near NYC? (lat 40.7128, lon -74.0060)",
+            "target_tool": "Weather Information Server:get_live_temp",
+            "predictions": [
+              "Weather Information Server:get_live_temp"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 52,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Quick math: can you add 100 + 250?",
+            "target_tool": "Add Numbers Server:add_numbers",
+            "predictions": [
+              "Add Numbers Server:add_numbers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's my BMI if I'm 175 cm and 70 kg?",
+            "target_tool": "MCP Server:get_bmi",
+            "predictions": [
+              "MCP Server:get_bmi"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you download a cleaned transcript (en) for this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ?",
+            "target_tool": "yt-dlp Video and Audio Downloader:download_transcript",
+            "predictions": [
+              "yt-dlp Video and Audio Downloader:download_transcript"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you list the projects in my workspace?",
+            "target_tool": "CodeRide:list_projects",
+            "predictions": [
+              "CodeRide:list_projects"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Is the Lyrical MCP server healthy right now?",
+            "target_tool": "Lyrical MCP:health_check",
+            "predictions": [
+              "Lyrical MCP:health_check"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you show stats about my thoughts in this session?",
+            "target_tool": "Think Tool Server:get_thought_stats",
+            "predictions": [
+              "Think Tool Server:get_thought_stats"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the weather in Paris right now? (metric units, detailed if possible)",
+            "target_tool": "Weather Server:get_weather",
+            "predictions": [
+              "Weather Server:get_weather"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Is July 4, 2025 a holiday in the US?",
+            "target_tool": "Public Holidays Service:check_holiday",
+            "predictions": [
+              "Public Holidays Service:check_holiday"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please add a :thumbsup: reaction to message 1727661234.000200 in channel C12345678.",
+            "target_tool": "Slack:slack_add_reaction",
+            "predictions": [
+              "Slack:slack_add_reaction"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What are the departments of the Met Museum?",
+            "target_tool": "Met Museum Server:list-departments",
+            "predictions": [
+              "Tool: `Met Museum Server:list-departments`"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you send a Telegram message saying 'Reminder: Daily check-in started.'?",
+            "target_tool": "Telegram Bot MCP:send_telegram_message",
+            "predictions": [
+              "Telegram Bot MCP:send_telegram_message"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's the current temperature in Tokyo, Japan, which is at 35.69° N and 139.77° E?",
+            "target_tool": "Weather Forecast Service:get_live_temp",
+            "predictions": [
+              "Weather Forecast Service:get_live_temp"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What's the school meal menu for the next 3 days at my kid's school, 의정부고등학교?",
+            "target_tool": "SchoolFoods:get_school_meal",
+            "predictions": [
+              "SchoolFoods:get_school_meal"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 63,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you get the forecast for lat 34.0200, lon -118.4900?",
+            "target_tool": "Endless:get-forecast",
+            "predictions": [
+              "Endless:get-forecast"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you suggest some conferences related to python and machine learning that are happening soon, like in the next six months, so I can plan my schedule accordingly?",
+            "target_tool": "ConferenceSearcher:get_events",
+            "predictions": [
+              "ConferenceSearcher:get_events"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you show me the list of pending commands?",
+            "target_tool": "Super Shell:get_pending_commands",
+            "predictions": [
+              "Super Shell:get_pending_commands"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you search Hugging Face Spaces for 'diffusers' and show up to 10 results?",
+            "target_tool": "Hugging Face MCP Server:search-spaces",
+            "predictions": [
+              "Hugging Face MCP Server:search-spaces"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you geocode 'Tokyo, Japan' for me (coords please)?",
+            "target_tool": "Google Maps:maps_geocode",
+            "predictions": [
+              "Google Maps:maps_geocode"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please send an email to my colleague with subject 'Meeting Reminder' and body 'Hello, this is a reminder about our team meeting next week. Please check your schedule'.",
+            "target_tool": "mcp max:send_email_tool",
+            "predictions": [
+              "mcp max:send_email_tool"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 60,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you show me the API steps to create a Sales Order?",
+            "target_tool": "Frappe Framework Integration Server:get_api_instructions",
+            "predictions": [
+              "Frappe Framework Integration Server:get_api_instructions"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please switch to Azure tenant '00000000-0000-0000-0000-000000000000'.",
+            "target_tool": "Azure MCP:select-tenant",
+            "predictions": [
+              "Azure MCP:select-tenant"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you run: echo 'Hello World' and show the output?",
+            "target_tool": "Lilith Shell:execute_command",
+            "predictions": [
+              "Lilith Shell:execute_command"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the latest commit that touched components/sync/service/data_type_manager.cc?",
+            "target_tool": "Chromium Latest Commit:get_chromium_latest_commit",
+            "predictions": [
+              "Chromium Latest Commit:Chromium Latest Commit:get_chromium_latest_commit"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What are the top 10 trending Python developers on GitHub who have been active over the past week, and could you give me a list of their GitHub usernames?",
+            "target_tool": "GitHub Trending:get_github_trending_developers",
+            "predictions": [
+              "GitHub Trending:get_github_trending_developers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the live temperature in LA? (34.0522, -118.2437)",
+            "target_tool": "Weather Service:get_live_temp",
+            "predictions": [
+              "weatherr:get_live_temp"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you give me a list of all banks in Brazil, including their headquarters and operational areas, so I can compare them and choose the right one for my new business to open an account?",
+            "target_tool": "BrasilAPI MCP Server:get_all_banks",
+            "predictions": [
+              "BrasilAPI MCP Server:get_all_banks"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 59,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you cross-check the answer to 'What is overfitting?' with three LLMs?",
+            "target_tool": "Multi LLM Cross-Check Server:cross_check",
+            "predictions": [
+              "Multi LLM Cross-Check Server:cross_check"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 58,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Please search arXiv for 'Graph Neural Networks' (up to 10 results).",
+            "target_tool": "arXiv Research Assistant:search_papers",
+            "predictions": [
+              "arXiv Research Assistant:search_papers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 55,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What are the top-rated Italian restaurants in New York City that I can visit within the next 7 days?",
+            "target_tool": "Seekeasy MCP Server:search_restaurants",
+            "predictions": [
+              "Seekeasy MCP Server:search_restaurants"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Get definitions for the term 'artificial intelligence'.",
+            "target_tool": "MCP Server:get_definitions",
+            "predictions": [
+              "MCP Server:get_definitions"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you pull NPM package details for 'react'?",
+            "target_tool": "Package Registry Server:get-npm-package-details",
+            "predictions": [
+              "Package Registry Server:get-npm-package-details"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "I'd like to see a random Pokémon that's been introduced in the last year. Can you show me which one was chosen?",
+            "target_tool": "Pokémon Information Server:random_pokemon",
+            "predictions": [
+              "Pokémon Information Server:random_pokemon"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Here's a picture of a cat sitting on a couch. Can you generate a realistic image URL that shows a similar scene - a cat on a couch, preferably with a sunset in the background?",
+            "target_tool": "Flux ImageGen Server:generateImageUrl",
+            "predictions": [
+              "Flux ImageGen Server:generateImageUrl"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 54,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What’s the current temperature around 37.7749, -122.4194 (SF)?",
+            "target_tool": "MCP-WORD Server:get_live_temp",
+            "predictions": [
+              "MCP-WORD Server:get_live_temp"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 61,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you analyze this selfie (https://example.com/selfie.jpg) and tell me what you see?",
+            "target_tool": "Skincare:get-selfie-analysis",
+            "predictions": [
+              "Skincare:get-selfie-analysis"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 62,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Can you multiply 4 by 3 for me?",
+            "target_tool": "Math Operations Server:multiply",
+            "predictions": [
+              "Math Operations Server:multiply"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 52,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Could you pull the danmaku for Bilibili video BV1xx411c7mD?",
+            "target_tool": "Bilibili API Server:get_video_danmaku",
+            "predictions": [
+              "Bilibili API Server:get_video_danmaku"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 56,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "Anything I should know about using Hugeicons with React?",
+            "target_tool": "Hugeicons MCP Server:get_platform_usage",
+            "predictions": [
+              "Hugeicons MCP Server:get_platform_usage"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Simple",
+            "request": "What time is it right now in America/New_York?",
+            "target_tool": "Time Server:get_current_time",
+            "predictions": [
+              "Time Server:get_current_time"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 57,
+            "haystack_tool_count": 80
+          }
+        ]
+      },
+      "Hard": {
+        "success_rate_topk": 0.88,
+        "total": 50,
+        "successes": 44,
+        "items": [
+          {
+            "bucket": "Hard",
+            "request": "Could you sketch a flowchart of our user signup, with the key nodes and transitions?",
+            "target_tool": "Visual Reasoning Server:visualReasoning",
+            "predictions": [
+              "Visual Reasoning Server:visualReasoning"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 41,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you pull the top 5 AI news from the last 30 days and summarize them?",
+            "target_tool": "Google News and Trends:get_news_by_keyword",
+            "predictions": [
+              "Google News and Trends:get_news_by_keyword"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "I’m optimizing an iOS project—can you scan '/Users/iosdev/Projects/MyProject' and list all files, including tests, so I can pass them to the optimizer?",
+            "target_tool": "iOS Code Migration Optimization Tool:ios_scan_project",
+            "predictions": [
+              "iOS Code Migration Optimization Tool:ios_scan_project"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Hey, can you check my balance on Binance spot?",
+            "target_tool": "CCXT MCP Server:account-balance",
+            "predictions": [
+              "CCXT MCP Server:account-balance"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you search Google Scholar for 'transformer interpretability' and give me up to 10 hits?",
+            "target_tool": "Google Scholar Search Server:search_google_scholar",
+            "predictions": [
+              "Google Scholar Search Server:search_google_scholar"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 52,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me create a clustered index on the 'employee_id' and 'last_name' columns in the 'employees' table, within the 'hr' schema of the 'mssql_server' database, so that employee records can be uniquely identified by 'employee_id' and 'last_name' for the next 3 months?",
+            "target_tool": "MSSQL Server Integration:create_index",
+            "predictions": [
+              "MSSQL Server Integration:create_index"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Do you know which geologic time interval matches ~66 million years?",
+            "target_tool": "Macrostrat API Server:timescale",
+            "predictions": [
+              "Macrostrat API Server:timescale"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 50,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "some help planning a quick trip to visit the top 5 beaches in Florida within the next 7 days. Can you suggest the top beaches, consider the weather forecast, and recommend the closest ones to Miami, Tampa, and Jacksonville, including any local events, natural attractions, and transportation options?",
+            "target_tool": "Google Search Server:search_google",
+            "predictions": [
+              "Google Search Server:search_google",
+              "Trends Hub:get-ifanr-news"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 44,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you grab a quick screenshot of the current page and call it 'current-page'?",
+            "target_tool": "Browserbase:browserbase_screenshot",
+            "predictions": [
+              "Browserbase:browserbase_screenshot"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you create a trigger for me on the orders table?",
+            "target_tool": "PostgreSQL Database Management Server:pg_manage_triggers",
+            "predictions": [
+              "PostgreSQL Database Management Server:pg_manage_triggers"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Quick math: can you add 123.45 and 678.90 for me?",
+            "target_tool": "计算器(Calc MCP):add",
+            "predictions": [
+              "Calculator(Calc MCP):add"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me figure out how to analyze the relationship between the number of hours of sleep and feeling refreshed in the morning?",
+            "target_tool": "Clear Thought 1.5:clear_thought",
+            "predictions": [
+              "Clear Thought 1.5:clear_thought"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 40,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "I’m working on a RN Skia swipe-to-reveal list item—could you outline a performant approach with steps, techniques, and sample code?",
+            "target_tool": "React Native Skia Animation Thinking Tool:skiaanimationthinking",
+            "predictions": [
+              "React Native Skia Animation Thinking Tool:skiaanimationthinking"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me design a study to test the relationship between time spent playing video games and time spent reading books?",
+            "target_tool": "Scientific Method Server:scientificMethod",
+            "predictions": [
+              "Scientific Method Server:scientificMethod"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "What are the current constituents of the CoinMarketCap 100 Index?",
+            "target_tool": "CoinMarketCap MCP:cmc100IndexLatest",
+            "predictions": [
+              "CoinMarketCap MCP:cmc100IndexLatest"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you use Atom of Thoughts to break down planning a team-building event—premises, reasoning, hypotheses, verification, and a conclusion?",
+            "target_tool": "Atom of Thoughts:AoT",
+            "predictions": [
+              "Atom of Thoughts:AoT"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you fetch https://www.weather.gov/ and give me the content in markdown?",
+            "target_tool": "Fetch Server:fetch",
+            "predictions": [
+              "Fetch Server:fetch"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you find up-to-date docs and examples for 'pandas DataFrame filtering'—ideally some real-world cleaning, transform, and viz cases?",
+            "target_tool": "Exa Search:get_code_context_exa",
+            "predictions": [
+              "Exa Search:get_code_context_exa"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you delete the tensor named 'temp_model_output' from memory?",
+            "target_tool": "Scientific Computation MCP Server:delete_tensor",
+            "predictions": [
+              "Scientific Computation MCP Server:delete_tensor"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you search for images of 'golden retriever' (large only, 10 results, relevance sort)?",
+            "target_tool": "Naver Search:search_image",
+            "predictions": [
+              "Naver Search:search_image"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Using Desktop Commander: can you send print('hello from DC') to the Python REPL running as PID 1234?",
+            "target_tool": "Desktop Commander:interact_with_process",
+            "predictions": [
+              "Desktop Commander:send_to_repl"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 0,
+            "haystack_tool_count": 0
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me prioritize tasks for the next week and figure out which ones can be done with the tools we have?",
+            "target_tool": "Taskmaster:taskmaster",
+            "predictions": [
+              "Taskmaster:taskmaster"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you grab the current global crypto market stats—active/ended ICOs, total volume (BTC/USD), and total market cap (BTC/USD)?",
+            "target_tool": "CoinGecko API Server:API-search-data",
+            "predictions": [
+              "CoinGecko API Server:API-search-data"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 49,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you get me the most relevant papers on reinforcement learning that were recently posted to arXiv, starting from the past year, with maybe 20 results at most, in descending order of relevance, so I can check them out?",
+            "target_tool": "AI Research Assistant:search-arxiv",
+            "predictions": [
+              "AI Research Assistant:search-arxiv"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 53,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Mind generating a 1024x1024 photorealistic image of a serene beach at sunset with palm trees?",
+            "target_tool": "text2image:image_generation",
+            "predictions": [
+              "text2image:image_generation"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 49,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please export the full game design as HTML docs.",
+            "target_tool": "Game Engine Server:exportGameDesign",
+            "predictions": [
+              "Game Engine Server:exportGameDesign"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you analyze and rate this prompt’s quality: 'Write a concise email to schedule a team meeting next Tuesday at 10am.'",
+            "target_tool": "Hi-AI:analyze_prompt",
+            "predictions": [
+              "Hi-AI:analyze_prompt"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you check the USDT (ERC20) balance for 0xF977814e90dA44bFA03b6295A0616a897441aceC on Ethereum mainnet?",
+            "target_tool": "Blockscout MCP Server:read_contract",
+            "predictions": [
+              "Blockscout MCP Server:read_contract"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 39,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you plan a quick 5-day trip with my friend to a nearby city?",
+            "target_tool": "Sequential Thinking:sequentialthinking",
+            "predictions": [],
+            "hit_topk": false,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you help me understand the new compound's properties by drawing an analogy with water's structure and behavior, considering both atomic composition and chemical bonding, so I can make some educated guesses about its performance in various conditions and weigh the usefulness of this analogy?",
+            "target_tool": "Analogical Reasoning Server:analogicalReasoning",
+            "predictions": [
+              "Visualization Charts Server:generate_liquid_chart"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 42,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you give me a list of the top 5 most recent internet-connected devices running Apache HTTP Server in the US, along with their geographic distribution, services, and any known vulnerabilities, within the next 30 days?",
+            "target_tool": "Shodan Server:shodan_search",
+            "predictions": [
+              "Shodan Server:shodan_search"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 44,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you run a clean on '/Users/iosdev/Projects/MyApp.xcodeproj' (scheme 'MyApp')?",
+            "target_tool": "XcodeBuild MCP Server:clean_proj",
+            "predictions": [
+              "XcodeBuild MCP Server:clean_proj"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please search Semantic Scholar for authors related to 'artificial intelligence' and return up to 50.",
+            "target_tool": "Semantic Scholar Academic Research MCP:search_semantic_scholar_authors",
+            "predictions": [
+              "Semantic Scholar Academic Research MCP:search_semantic_scholar_authors"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 50,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you show me the balance of ad account act_1234567890, and its name, by tomorrow?",
+            "target_tool": "Facebook Ads Server:get_details_of_ad_account",
+            "predictions": [
+              "Facebook Ads Server:get_details_of_ad_account"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 50,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you rename the 'Marketing Tasks' folder to 'Marketing Archive' (leave statuses as-is)?",
+            "target_tool": "ClickUp Task Integration Server:update_folder",
+            "predictions": [
+              "ClickUp Task Integration Server:update_folder"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can I get the latest version of 'doc123' from Linear?",
+            "target_tool": "Linear:get_document",
+            "predictions": [
+              "Linear:get_document"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 49,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you plan a 7-day trip for me somewhere with a pleasant, not too hot climate, and find a hotel that's right on or close to the beach, ideally within walking distance?",
+            "target_tool": "Model Context Protocol Server:sequentialthinking",
+            "predictions": [],
+            "hit_topk": false,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you pull the current Prometheus metrics from the WildFly server on 'wildfly-host:8080'?",
+            "target_tool": "WildFly MCP Server:getWildFlyPrometheusMetrics",
+            "predictions": [
+              "WildFly MCP Server:getWildFlyPrometheusMetrics"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 51,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you fetch https://twitter.com/ and give me the page in markdown?",
+            "target_tool": "Fetch Server:fetch",
+            "predictions": [
+              "Fetch Server:fetch"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "And if possible, could you also include the trading volume for each day?",
+            "target_tool": "FinanceMCP Server:stock_data",
+            "predictions": [
+              "CoinGecko API Server:API-coins-id"
+            ],
+            "hit_topk": false,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Hey, I'm looking for this week's Watchtower study articles, could you get the latest ones from JW.org?",
+            "target_tool": "JW.org Content Tools:getWatchtowerLinks",
+            "predictions": [
+              "JW.org Content Tools:getWatchtowerLinks"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you search PubMed for title/abstract keywords ['Parkinson's disease', 'recruiting'] and give me up to 10 results?",
+            "target_tool": "PubMedSearch:search_pubmed",
+            "predictions": [
+              "PubMedSearch:search_pubmed"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 42,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please delete the TCP proxy I created yesterday/today that’s still active, and confirm it’s gone.",
+            "target_tool": "Railway MCP Server:tcp_proxy_delete",
+            "predictions": [
+              "Railway MCP Server:tcp_proxy_delete"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 43,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you show the weather assistant’s friendly greeting message?",
+            "target_tool": "Deneme MCP Server:weather_greeting",
+            "predictions": [
+              "Deneme MCP Server:weather_greeting"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Please create a new group called 'Summer Reading List'.",
+            "target_tool": "Clay MCP:createGroup",
+            "predictions": [
+              "Clay MCP:createGroup"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can I get a list of all my requests with their basic information and a summary of the tasks involved?",
+            "target_tool": "TaskManager:list_requests",
+            "predictions": [
+              "TaskManager:list_requests"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 46,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "In the document, please delete characters 5-15 from paragraph 0.",
+            "target_tool": "Docx Document Processing Service:delete_text",
+            "predictions": [
+              "Docx Document Processing Service:delete_text"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 44,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Can you show me the Velt feature usage analytics for the past month, breaking down the counts of create, read, update, and delete operations for each feature?",
+            "target_tool": "Velt Analytics Server:get_feature_analytics_count",
+            "predictions": [
+              "Velt Analytics Server:get_feature_analytics_count"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 48,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "Could you provide overall statistics for Parkinson's disease clinical trials?",
+            "target_tool": "ClinicalTrials MCP Server:get_study_statistics",
+            "predictions": [
+              "ClinicalTrials MCP Server:get_study_statistics"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 47,
+            "haystack_tool_count": 80
+          },
+          {
+            "bucket": "Hard",
+            "request": "When you get a chance, list the existing Hyperbrowser profiles (defaults are fine).",
+            "target_tool": "Hyperbrowser:list_profiles",
+            "predictions": [
+              "Hyperbrowser:list_profiles"
+            ],
+            "hit_topk": true,
+            "haystack_server_count": 45,
+            "haystack_tool_count": 80
+          }
+        ]
+      }
+    }
+  }
+}
